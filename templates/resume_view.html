@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resume Details</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h2 { color: #2c3e50; border-bottom: 2px solid #ccc; padding-bottom: 5px; }
+        pre { background: #f4f4f4; padding: 10px; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <h2>{{ data['Name'] }}</h2>
+    <p><strong>Date of Birth:</strong> {{ data['DOB'] }}</p>
+
+    <h2>Education</h2>
+    <pre>{{ data['Education'] }}</pre>
+
+    <h2>Projects</h2>
+    <pre>{{ data['Projects'] }}</pre>
+
+    <h2>Internships</h2>
+    <pre>{{ data['Internships'] }}</pre>
+
+    <h2>Core Skills</h2>
+    <pre>{{ data['Core Skills'] }}</pre>
+
+    <h2>Achievements</h2>
+    <pre>{{ data['Achievements'] }}</pre>
+</body>
+</html>
