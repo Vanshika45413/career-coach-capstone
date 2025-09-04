@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ATS Score - {{ job_role }}</title>
+</head>
+<body>
+    <h1>ATS Score for {{ data['Name'] }} ({{ job_role }})</h1>
+    <p><strong>Score:</strong> {{ score }} / 100</p>
+    
+    {% if feedback %}
+        <h2>Feedback:</h2>
+        <ul>
+        {% for item in feedback %}
+            <li>{{ item }}</li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+    
+    <h2>Resume Details:</h2>
+    <h3>Education</h3>
+    <pre>{{ data['Education'] }}</pre>
+    <h3>Projects</h3>
+    <pre>{{ data['Projects'] }}</pre>
+    <h3>Internships</h3>
+    <pre>{{ data['Internships'] }}</pre>
+    <h3>Core Skills</h3>
+    <pre>{{ data['Core Skills'] }}</pre>
+    <h3>Achievements</h3>
+    <pre>{{ data['Achievements'] }}</pre>
+    <h3>Certificates</h3>
+    <pre>{{ data['Certificates'] }}</pre>
+</body>
+</html>

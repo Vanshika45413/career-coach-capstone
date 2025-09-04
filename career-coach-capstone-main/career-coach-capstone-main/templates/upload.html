@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Resume</title>
+</head>
+<body>
+    <h2>Upload Resume PDF</h2>
+    <form action="/ats_score" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".pdf" required>
+        <label for="job_role">Select Job Role:</label>
+        <select name="job_role" required>
+            <option value="">--Choose Role--</option>
+            <option value="Frontend Developer">Frontend Developer</option>
+            <option value="Backend Developer">Backend Developer</option>
+            <option value="Data Analyst">Data Analyst</option>
+            <option value="Machine Learning Engineer">Machine Learning Engineer</option>
+        </select>
+        <button type="submit">Upload & Check ATS Score</button>
+    </form>
+</body>
+</html>
