@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload Resume | Career Coach</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f4f9; margin: 0; padding: 0; }
+        .container { max-width: 600px; margin: 60px auto; background: #fff; padding: 40px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); text-align: center; }
+        h1 { color: #333; margin-bottom: 10px; }
+        p { color: #666; margin-bottom: 30px; }
+        input[type="file"] { display: block; margin: 20px auto; }
+        button { padding: 12px 25px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; }
+        button:hover { background-color: #45a049; }
+        .note { font-size: 14px; color: #999; margin-top: 10px; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>ATS Resume + Job Recommendation</h1>
+    <p>Upload your resume (PDF or DOCX) to get a detailed analysis and job recommendations.</p>
+
+    <form id="resumeForm" enctype="multipart/form-data" method="post" action="/analyze_resume">
+        <label for="file">Select Resume:</label>
+        <input type="file" id="file" name="file" accept=".pdf,.docx" required>
+        <button type="submit">Upload Resume</button>
+        <p class="note">Accepted formats: PDF, DOCX. Maximum file size: 5MB.</p>
+    </form>
+</div>
+</body>
+</html>

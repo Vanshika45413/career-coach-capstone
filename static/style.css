@@ -1,0 +1,99 @@
+/* General body styles */
+body {
+  font-family: Arial, sans-serif;
+  background: #f7f7f7;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container for pages */
+.container {
+  width: 80%;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 25px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Headings */
+h1 {
+  color: #007BFF;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #333;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+/* Upload form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: flex-start;
+}
+
+input[type="file"] {
+  padding: 5px;
+}
+
+/* Button */
+button {
+  background: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+/* Skill badges */
+.skills span {
+  display: inline-block;
+  background-color: #007BFF;
+  color: white;
+  padding: 5px 10px;
+  margin: 3px 3px 3px 0;
+  border-radius: 12px;
+  font-size: 0.9em;
+}
+
+/* Link back to upload page */
+a {
+  display: inline-block;
+  margin-top: 25px;
+  text-decoration: none;
+  color: #007BFF;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}

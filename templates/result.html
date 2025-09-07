@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resume Analysis Result | Career Coach</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f9f9f9; margin: 0; padding: 0; }
+        .container { max-width: 900px; margin: 40px auto; background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        h1, h2 { color: #333; }
+        .section { margin-bottom: 25px; }
+        ul { list-style-type: disc; padding-left: 20px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+        th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+        th { background-color: #f0f0f0; }
+        .upload-again { margin-top: 20px; display: inline-block; padding: 10px 20px; background-color: #4CAF50; color: #fff; border-radius: 5px; text-decoration: none; }
+        .upload-again:hover { background-color: #45a049; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>ATS Resume Analysis</h1>
+
+    <div class="section">
+        <h2>Education</h2>
+        {% if data.education %}
+            <ul>
+                {% for edu in data.education %}
+                    <li>{{ edu }}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No education information detected.</p>
+        {% endif %}
+    </div>
+
+    <div class="section">
+        <h2>Experience</h2>
+        {% if data.experience %}
+            <ul>
+                {% for exp in data.experience %}
+                    <li>{{ exp }}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No experience information detected.</p>
+        {% endif %}
+    </div>
+
+    <div class="section">
+        <h2>Skills</h2>
+        {% if data.skills %}
+            <ul>
+                {% for skill in data.skills %}
+                    <li>{{ skill }}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No skills detected.</p>
+        {% endif %}
+    </div>
+
+    <div class="section">
+        <h2>Projects</h2>
+        {% if data.projects %}
+            <ul>
+                {% for proj in data.projects %}
+                    <li>{{ proj }}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No projects detected.</p>
+        {% endif %}
+    </div>
+
+    <div class="section">
+        <h2>Recommended Jobs</h2>
+        {% if jobs %}
+            <table>
+                <tr>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Match Score (%)</th>
+                </tr>
+                {% for job in jobs %}
+                    <tr>
+                        <td>{{ job.title }}</td>
+                        <td>{{ job.description }}</td>
+                        <td>{{ job.score }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        {% else %}
+            <p>No job recommendations available.</p>
+        {% endif %}
+    </div>
+
+    <a class="upload-again" href="/upload_resume/">🔄 Upload Another Resume</a>
+</div>
+</body>
+</html>

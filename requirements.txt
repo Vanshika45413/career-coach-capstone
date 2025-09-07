@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+pandas
+python-docx
+PyPDF2
+sentence-transformers
+torch
